@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <style>
+      @font-face {
+        font-family: "jet-brains-mono";
+        src: url("/fonts/JetBrainsMono-VariableFont_wght.ttf");
+      }
+    </style>
+    <title>Password Generator App</title>
+    <script
+      src="https://kit.fontawesome.com/32c384e39d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-[#18171F] text-white text-pretty font-[jet-brains-mono]">
+    <div
+      class="container flex flex-col items-center justify-center min-h-screen mx-auto px-4"
+    >
+      <h1
+        class="font-bold text-[1rem] sm:text-[1.5rem] text-[#817D92] mb-[1rem] sm:mb-[2rem]"
+      >
+        Password Generator
+      </h1>
+      <main class="w-[33.75rem] max-w-full flex flex-col">
+        <div
+          class="h-[4rem] sm:h-[5rem] bg-[#24232C] flex justify-between items-center px-4 sm:px-8 w-full"
+        >
+          <input
+            type="text"
+            placeholder="P4$5W0rD!"
+            class="bg-transparent outline-none text-[1.5rem] sm:text-[2rem] text-[#E6E5EA] max-w-[90%]"
+            readonly
+            id="generated-password"
+          />
+          <button id="copy-button">
+            <i
+              class="fa-regular fa-copy text-[1.5rem] hover:text-[#A4FFAF] transition"
+            ></i>
+          </button>
+        </div>
+        <div class="sm:px-8 sm:py-6 p-4 bg-[#24232C]">
+          <div class="flex flex-col gap-4 sm:gap-6 mb-[2.5rem]">
+            <div class="flex justify-between">
+              <label for="character-length">Character Length</label>
+              <span
+                class="font-bold text-[#A4FFAF] text-[1.5rem] sm:[2rem]"
+                id="character-length-value"
+                >10</span
+              >
+            </div>
+            <input
+              class="w-full accent-[#A4FFAF] thumb-white"
+              type="range"
+              id="character-length"
+              min="8"
+              max="16"
+              value="10"
+            />
+          </div>
+          <div class="flex flex-col gap-4 sm:gap-5 mb-8">
+            <div class="flex gap-5 sm:gap-6">
+              <input
+                class="accent-[#A4FFAF] size-5"
+                type="checkbox"
+                id="include-uppercase"
+              />
+              <label
+                class="sm:text-[1.125rem] select-none"
+                for="include-uppercase"
+              >
+                Include Uppercase
+              </label>
+            </div>
+            <div class="flex gap-5 sm:gap-6">
+              <input
+                class="accent-[#A4FFAF] size-5"
+                type="checkbox"
+                id="include-lowercase"
+              />
+              <label
+                class="sm:text-[1.125rem] select-none"
+                for="include-lowercase"
+              >
+                Include Lowercase
+              </label>
+            </div>
+            <div class="flex gap-5 sm:gap-6">
+              <input
+                class="accent-[#A4FFAF] size-5"
+                type="checkbox"
+                id="include-numbers"
+              />
+              <label
+                class="sm:text-[1.125rem] select-none"
+                for="include-numbers"
+              >
+                Include Numbers
+              </label>
+            </div>
+            <div class="flex gap-5 sm:gap-6">
+              <input
+                class="accent-[#A4FFAF] size-5"
+                type="checkbox"
+                id="include-symbols"
+              />
+              <label
+                class="sm:text-[1.125rem] select-none"
+                for="include-symbols"
+              >
+                Include Symbols
+              </label>
+            </div>
+          </div>
+          <div
+            class="h-[3.5rem] sm:h-[4.5rem] bg-[#18171F] flex justify-between py-5 px-4 sm:px-8 mb-4 sm:mb-8"
+          >
+            <span class="text-[#817D92] sm:text-[1.125rem]">STRENGTH</span>
+            <div class="flex gap-4">
+              <span
+                class="text-[1.125rem] sm:text-[1.5rem] uppercase"
+                id="strength"
+              ></span>
+              <div class="flex gap-2">
+                <span
+                  class="border-2 h-[1.75rem] w-[0.625rem]"
+                  id="strength-bar-1"
+                ></span>
+                <span
+                  class="border-2 h-[1.75rem] w-[0.625rem]"
+                  id="strength-bar-2"
+                ></span>
+                <span
+                  class="border-2 h-[1.75rem] w-[0.625rem]"
+                  id="strength-bar-3"
+                ></span>
+                <span
+                  class="border-2 h-[1.75rem] w-[0.625rem]"
+                  id="strength-bar-4"
+                ></span>
+              </div>
+            </div>
+          </div>
+          <button
+            class="bg-[#A4FFAF] w-full py-5 text-[#24232C] sm:text-[1.5rem] font-bold"
+            id="generate-button"
+          >
+            <span>Generate</span>
+            <i class="fa-solid fa-arrow-right-long ml-2"></i>
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
