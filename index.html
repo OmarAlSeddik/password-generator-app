@@ -28,11 +28,13 @@
     <div
       class="container flex flex-col items-center justify-center min-h-screen mx-auto px-4"
     >
-      <h1
-        class="font-bold text-[1rem] sm:text-[1.5rem] text-[#817D92] mb-[1rem] sm:mb-[2rem]"
-      >
-        Password Generator
-      </h1>
+      <header>
+        <h1
+          class="font-bold text-[1rem] sm:text-[1.5rem] text-[#817D92] mb-[1rem] sm:mb-[2rem]"
+        >
+          Password Generator
+        </h1>
+      </header>
       <main class="w-[33.75rem] max-w-full flex flex-col">
         <div
           class="h-[4rem] sm:h-[5rem] bg-[#24232C] flex justify-between items-center px-4 sm:px-8 w-full mb-4 sm:mb-6"
@@ -44,7 +46,7 @@
             readonly
             id="generated-password"
           />
-          <button id="copy-button">
+          <button id="copy-button" aria-label="Copy to clipboard">
             <i
               class="fa-regular fa-copy text-[1.5rem] hover:text-[#A4FFAF] transition"
             ></i>
