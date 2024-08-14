@@ -4,8 +4,8 @@ This is a solution to Frontend Mentor's [Password Generator App challenge](https
 
 ## Links
 
-- [Live Link](#)
-- [Solution Link](#)
+- [Live Link](https://password-generator-app-omaralseddiks-projects.vercel.app/)
+- [Solution Link](https://www.frontendmentor.io/solutions/vanilla-js-wtailwindcss-AcGvfn5Evj)
 
 ## Features
 
